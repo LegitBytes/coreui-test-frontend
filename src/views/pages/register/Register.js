@@ -42,16 +42,16 @@ const Register = () => {
   async function signUp(e) {
     e.preventDefault();
     updateFormState(() => ({ ...formState, [e.target.name]: e.target.value }));
-    const { username, email, password, rpassword } = formState;
-    if (username && email && password && rpassword===password) {
-      await Auth.signUp({ username, password, rpassword,  attributes: { email } })
+    const { username, password, rpassword } = formState;
+    if (username && password && rpassword===password) {
+      await Auth.signUp({ username, password, rpassword})
         .then((data) => {
           updateFormState(() => ({ ...formState, formType: "confirmSignUp" }));
         })
         .catch((err) => {
           alert(err.message);
         });
-    } else if(username && password && email && !password===rpassword){
+    } else if(username && password && !password===rpassword){
       alert("please enter the same password");
     }else{
       alert("Please enter your valid details")
@@ -98,18 +98,6 @@ const Register = () => {
                         onChange={onChange}
                         placeholder="Username"
                         autoComplete="username"
-                      />
-                    </CInputGroup>
-                    <CInputGroup className="mb-3">
-                      <CInputGroupPrepend>
-                        <CInputGroupText>@</CInputGroupText>
-                      </CInputGroupPrepend>
-                      <CInput
-                        type="text"
-                        name="email"
-                        onChange={onChange}
-                        placeholder="Email"
-                        autoComplete="email"
                       />
                     </CInputGroup>
                     <CInputGroup className="mb-3">

@@ -21,7 +21,6 @@ const MainChartExample = (attributes) => {
 
     Auth.currentSession()
     .then((data)=>{
-      console.log(data);
       setAccessKey(data.getIdToken().getJwtToken())
     })
     .catch((err)=>{
@@ -29,12 +28,14 @@ const MainChartExample = (attributes) => {
     })
   }, [])
 
-  console.log("Access Key",accessKey);
+  // https://39jpo50a3f.execute-api.us-east-2.amazonaws.com/dev/getdata/{key_value}
+
+  // https://a6qlgnoyp3.execute-api.us-east-2.amazonaws.com/dev/getdata/${attributes.keyvalue}
 
 
   useEffect(() => {
     axios
-      .get(`https://a6qlgnoyp3.execute-api.us-east-2.amazonaws.com/dev/getdata/${attributes.keyvalue}`,{
+      .get(`  https://39jpo50a3f.execute-api.us-east-2.amazonaws.com/dev/getdata/${attributes.keyvalue}`,{
         headers:{
           'Authorization': accessKey,
           'Content-Type': 'application/json',

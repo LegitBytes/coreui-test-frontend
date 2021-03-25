@@ -83,7 +83,6 @@ const Login = () => {
                         onChange={onChange}
                         placeholder="Username"
                         autoComplete="username"
-                        onInvalid={()=> alert('fill it with properly')}
                       />
                     </CInputGroup>
                     <CInputGroup className="mb-4">
@@ -98,7 +97,6 @@ const Login = () => {
                         onChange={onChange}
                         placeholder="Password"
                         autoComplete="current-password"
-                        onInvalid={()=> alert('fill it with properly')}
                       />
                     </CInputGroup>
                     <CRow>

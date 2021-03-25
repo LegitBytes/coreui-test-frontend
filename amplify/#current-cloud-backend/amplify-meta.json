@@ -1,0 +1,51 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-coreuitestdev-dev-182320-authRole",
+      "UnauthRoleArn": "arn:aws:iam::299699910632:role/amplify-coreuitestdev-dev-182320-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::299699910632:role/amplify-coreuitestdev-dev-182320-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-coreuitestdev-dev-182320-deployment",
+      "UnauthRoleName": "amplify-coreuitestdev-dev-182320-unauthRole",
+      "StackName": "amplify-coreuitestdev-dev-182320",
+      "StackId": "arn:aws:cloudformation:us-east-2:299699910632:stack/amplify-coreuitestdev-dev-182320/c144b5e0-8bd6-11eb-8239-06f2546a4124",
+      "AmplifyAppId": "d2tq9ektiz0qln"
+    }
+  },
+  "auth": {
+    "coreuitestdevabc0d149": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-coreuitestdev-dev-182320-deployment/amplify-cfn-templates/auth/coreuitestdevabc0d149-cloudformation-template.yml",
+        "logicalId": "authcoreuitestdevabc0d149"
+      },
+      "lastPushTimeStamp": "2021-03-23T12:58:37.967Z",
+      "output": {
+        "UserPoolId": "us-east-2_p3Awy5anT",
+        "AppClientIDWeb": "dcokkhg2dbi283orjukhsb2pt",
+        "AppClientID": "41smnsu16lsi6n4dpge2kdrirb",
+        "IdentityPoolId": "us-east-2:bed97a4e-5687-4717-9b89-4a95ee8033e7",
+        "IdentityPoolName": "coreuitestdevabc0d149_identitypool_abc0d149__dev",
+        "UserPoolName": "coreuitestdevabc0d149_userpool_abc0d149"
+      },
+      "lastPushDirHash": "wuf7sOe/19wWvpAFpDw4xqfBX+o="
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "providerPlugin": "awscloudformation",
+      "type": "manual",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-coreuitestdev-dev-182320-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
+        "logicalId": "hostingamplifyhosting"
+      },
+      "lastPushTimeStamp": "2021-03-23T12:58:37.967Z",
+      "output": {},
+      "lastPushDirHash": "/+VZ33seFFqAr6wbtptwbINUfSA="
+    }
+  }
+}
